@@ -125,7 +125,7 @@ resource "helm_release" "twingate_connector" {
 
 
 resource "twingate_resource" "resource" {
-  name = "network"
+  name = "ghost"
   address = "ghost-blog.ghost.svc.cluster.local"
   remote_network_id = twingate_remote_network.civo_network.id
 }
