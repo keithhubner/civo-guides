@@ -27,11 +27,11 @@ The end result will give us private access via Twingate to the new Ghost service
 
 Before we start you will need the following setup:
 
-✅ kubectl installed
-✅ vscode installed
-✅ Terraform installed
-✅ Civo Kubernetes account
-✅ Twingate enterprise account
+* kubectl installed ✅ 
+* vscode installed ✅
+* Terraform installed ✅
+* Civo Kubernetes account ✅
+* Twingate enterprise account ✅
 
 ## Getting Started 🏁
 
