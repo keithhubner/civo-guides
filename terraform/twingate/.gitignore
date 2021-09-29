@@ -1,3 +1,5 @@
+# Any files in the ignore folder
+**/ignore/*
 # Local .terraform directories
 **/.terraform/*
 
