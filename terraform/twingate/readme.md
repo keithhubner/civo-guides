@@ -1,4 +1,4 @@
-# Intro
+# Intro 👋
 
 More and more companies are providing ways to automate via code the creation and management of infrastructure and applications. Terraform is probably the most recognised tool for writing and managing IaC and therefore this is what I will be using in this guide. 
 
