@@ -79,6 +79,7 @@ provider "helm" {
   }
 }
 
+# Deploy the Twingate connector to the cluster using Helm 
 resource "helm_release" "twingate_connector" {
   name       = "connector"
   repository = "https://twingate.github.io/helm-charts"
