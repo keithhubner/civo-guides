@@ -72,17 +72,6 @@ resource "twingate_connector_tokens" "civo_connector_tokens" {
   connector_id = twingate_connector.civo_connector.id
 }
 
-
-#output "twingate_access_token_output" {
-#  value = twingate_remote_network.civo_network.id
-
-#}
-
-#output "twingate_refresh_token_output" {
-#  value = twingate_connector_tokens.civo_connector_tokens.refresh_token 
-#  sensitive = true
-#}
-
 # Deploy the connector to the new k8s cluster via helm
 provider "helm" {
   kubernetes {
