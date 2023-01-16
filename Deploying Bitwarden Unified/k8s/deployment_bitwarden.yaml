@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bitwarden
+  namespace: bitwarden
+spec:
+  selector:
+    matchLabels:
+      app: bitwarden
+  template:
+    metadata:
+      labels:
+        app: bitwarden
+    spec:
+      containers:
+      - name: bitwarden
+        image: bitwarden/self-host:beta
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+        envFrom:
+         - configMapRef:
+            name: bitwarden-cmap
+        env:
+        - name: globalSettings__mysql__connectionString
+          valueFrom:
+            secretKeyRef:
+              name: values
+              key: connstring
+        - name: BW_INSTALLATION_ID
+          valueFrom:
+            secretKeyRef:
+              name: values
+              key: installationID              
+        - name: BW_INSTALLATION_KEY
+          valueFrom:
+            secretKeyRef:
+              name: values
+              key: installationKEY                                   

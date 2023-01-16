@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bitwarden-cmap
+  namespace: bitwarden
+data:
+  BW_DOMAIN: "bf5da045-c75d-4c0e-9321-17929476e1f4.k8s.civo.com"
+
