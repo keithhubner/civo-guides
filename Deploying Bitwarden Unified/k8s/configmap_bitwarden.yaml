@@ -4,5 +4,20 @@ metadata:
   name: bitwarden-cmap
   namespace: bitwarden
 data:
-  BW_DOMAIN: "bf5da045-c75d-4c0e-9321-17929476e1f4.k8s.civo.com"
-
+  BW_DOMAIN: "bitwarden.yourdomain.com" # Replace bitwarden.yourdomain.com with the domain where Bitwarden will be accessed.
+  BW_DB_PROVIDER: "mysql" # The database provider you will be using for your Bitwarden server. Available options are sqlserver, postgresql, or mysql/mariadb.
+  BW_DB_SERVER: ""  # The name of the server on which your database is running.
+  BW_DB_DATABASE: "" # The name of your Bitwarden database.
+  BW_DB_USERNAME: "" # The username for accessing the Bitwarden database.
+  # Additional Environment Variables - see https://bitwarden.com/help/install-and-deploy-unified-beta/
+  # BW_PORT_HTTP: "" 
+  # BW_PORT_HTTPS: "" 
+  # BW_ENABLE_SSL: ""
+  # BW_SSL_CERT: ""
+  # BW_SSL_KEY: ""
+  # BW_ENABLE_SSL_CA: ""
+  # BW_SSL_CA_CERT: ""
+  # BW_ENABLE_SSL_DH: ""
+  # BW_SSL_DH_CERT: ""
+  # BW_SSL_PROTOCOLS: ""
+  # BW_SSL_CIPHERS: ""

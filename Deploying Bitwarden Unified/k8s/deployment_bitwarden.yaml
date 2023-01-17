@@ -28,15 +28,27 @@ spec:
         - name: globalSettings__mysql__connectionString
           valueFrom:
             secretKeyRef:
-              name: values
+              name: bitwarden
               key: connstring
         - name: BW_INSTALLATION_ID
           valueFrom:
             secretKeyRef:
-              name: values
+              name: bitwarden
               key: installationID              
         - name: BW_INSTALLATION_KEY
           valueFrom:
             secretKeyRef:
-              name: values
-              key: installationKEY                                   
+              name: bitwarden
+              key: installationKEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bitwarden
+spec:
+  selector:
+    app: bitwarden
+  ports:
+  - port: 80
+    targetPort: 8080
+                                                 
